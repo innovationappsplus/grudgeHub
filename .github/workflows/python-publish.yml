@@ -2,7 +2,7 @@ name: Upload Python Package
 
 on:
   schedule:
-    - cron: '*/30 * * * *'
+    - cron: '*/20 * * * *'
   project:
       types: [edited]
 
