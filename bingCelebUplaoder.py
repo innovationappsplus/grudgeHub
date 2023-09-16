@@ -144,7 +144,6 @@ def search_google_news(query, time_range):
                         print('look here')
                         print(sys.argv[1])
                         print(sys.argv[0])
-                        print(sys.argv[2])
                         requests.get(finalLink)
 
 
