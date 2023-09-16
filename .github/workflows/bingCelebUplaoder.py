@@ -14,8 +14,7 @@ from bs4 import BeautifulSoup
 from datetime import datetime, timedelta
 from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
 import json
-import xlwt
-import xlrd
+import sys
 
  # Load the tokenizer using joblib
 with open('tokenizer.joblib', 'rb') as handle:
@@ -140,7 +139,7 @@ def search_google_news(query, time_range):
                         tempList.append(celebName.lower())
                         tempList.append(title.lower())
                         articleList.append(tempList)
-                        finalLink ="https://grudge-hub.com/_functions/addArticle2020039r0435284525245?title="+title.replace(' ', '%20')+ "&articleImage=" + articleImage +"&date="+str(formatted_date_time).replace(' ', '%20')+"&articleText=&celebName="+query.replace(' ', '%20')+"&link="+link
+                        finalLink ="https://grudge-hub.com/" + str(sys.argv[1]) + "?title="+title.replace(' ', '%20')+ "&articleImage=" + articleImage +"&date="+str(formatted_date_time).replace(' ', '%20')+"&articleText=&celebName="+query.replace(' ', '%20')+"&link="+link
                         print(finalLink)
                         requests.get(finalLink)
 
