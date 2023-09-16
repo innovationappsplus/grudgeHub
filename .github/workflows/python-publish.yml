@@ -37,4 +37,4 @@ jobs:
       env:
           API: ${{ secrets.API }}
       run: |
-        python bingCelebUplaoder.py "$API1" 
+        python bingCelebUplaoder.py "$API" 
