@@ -141,8 +141,10 @@ def search_google_news(query, time_range):
                         articleList.append(tempList)
                         finalLink ="https://grudge-hub.com/" + str(sys.argv[1]) + "?title="+title.replace(' ', '%20')+ "&articleImage=" + articleImage +"&date="+str(formatted_date_time).replace(' ', '%20')+"&articleText=&celebName="+query.replace(' ', '%20')+"&link="+link
                         print(finalLink)
+                        print('look here')
                         print(sys.argv[1])
                         print(sys.argv[0])
+                        print(sys.argv[2])
                         requests.get(finalLink)
 
 
