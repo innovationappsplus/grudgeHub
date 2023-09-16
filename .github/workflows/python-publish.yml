@@ -20,7 +20,7 @@ jobs:
         python-version: '3.x'
     - name: Install dependencies
       env:
-          API_KEY: ${{ secrets.API }} 
+          API_KEY: ${{ secrets.API1 }} 
       run: |
         python -m pip install --upgrade pip
         pip install tensorflow
@@ -37,4 +37,4 @@ jobs:
       env:
           API: ${{ secrets.API }}
       run: |
-        python bingCelebUplaoder.py "$API" 
+        python bingCelebUplaoder.py "$API1" 
